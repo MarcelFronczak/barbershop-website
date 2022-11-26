@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;  
+}
+
+:root {
+    --accent1: #fada9c;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+}
+
+nav {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 20%, rgba(255,255,255,0) 100%);
+} 
+
+.nav-container {
+    width: 100%;
+    padding: 1rem 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 48px;
+    width: 48px;
+    text-align: center;
+    border: 1px solid var(--accent1);
+    border-radius: 50%;
+    text-decoration: none;
+    display:block;
+}
+
+.nav-logo > p {
+    text-align: center;
+    color: var(--accent1);
+    width: 45px;
+    height: 45px;
+    line-height: 44px;
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.nav-ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-ul > li {
+    list-style: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-ul > li:hover {
+    transform: translateY(-3px);
+}
+
+.nav-a {
+    margin-left: 2rem;
+    letter-spacing: 1px;
+    font-weight: 200;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    height: 100vh;
+    width: 100%;
+}
+
+header::before {    
+    content: "";
+    background-image: url(header-img.jpg);
+    background-size: cover;
+    background-position: right;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.65;
+}
+
+.header-container {
+    z-index: 1;
+    width: 55%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hero-section {
+    display:block;
+    text-align: center;
+}
+
+.hero-section > h1 {
+    font-size: 62px;
+    font-weight: 400;
+    color: var(--accent1);
+}
+
+.hero-section > p {
+    margin: 14px 0 35px;
+    color: #fff;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.cta-appointment {
+    text-align: center;
+    padding: 10px 24px 12px;
+    color: var(--accent1);
+    font-weight: 200;
+    font-size: 18px;
+    text-decoration: none;
+    border: 1px solid var(--accent1);
+    border-radius: 22px;
+}
+
+.cta-nav {
+    font-size: 13px;
+}
