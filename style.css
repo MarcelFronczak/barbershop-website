@@ -16,7 +16,12 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Oswald', sans-serif;
 }
 
+html {
+    display: block;
+}
+
 nav {
+    overflow: hidden;
     z-index: 2;
     position: absolute;
     width: 100%;
@@ -57,6 +62,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .nav-ul > li {
@@ -64,7 +70,8 @@ nav {
     transition: all 0.2s ease-in-out;
 }
 
-.nav-ul > li:hover {
+.nav-ul > li:hover,
+.nav-ul > li:focus {
     transform: translateY(-3px);
 }
 
@@ -77,19 +84,30 @@ nav {
     transition: all 0.3s ease-in-out;
 }
 
-
+.cta-nav {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 18px 12px;
+    color: var(--accent1);
+    font-weight: 200;
+    font-size: 18px;
+    text-decoration: none;
+    border: 1px solid var(--accent1);
+    border-radius: 22px;
+}
 
 header {
+    overflow: hidden;
     display: flex;
     justify-content: center;
     background-color: #000;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
 }
 
 header::before {    
     content: "";
-    background-image: url(header-img.jpg);
+    background-image: url(/images/header-img.jpg);
     background-size: cover;
     background-position: right;
     position: absolute;
@@ -121,21 +139,33 @@ header::before {
 }
 
 .hero-section > p {
-    margin: 14px 0 35px;
+    margin: 14px 0 30px;
     color: #fff;
     font-weight: 200;
     font-size: 20px;
 }
 
 .cta-appointment {
+    display: inline-block;
     text-align: center;
-    padding: 10px 24px 12px;
+    padding: 11px 24px 13px;
     color: var(--accent1);
     font-weight: 200;
     font-size: 18px;
     text-decoration: none;
     border: 1px solid var(--accent1);
     border-radius: 22px;
+    transition: all 0.2s ease-in-out; 
+}
+
+.fa-chevron-right {
+    font-size: 10px;
+}
+
+.cta-appointment:hover,
+.cta-appointment:focus { 
+    transform: translateY(-4px);
+    box-shadow: 0 0.5em 0.5em -0.4em var(--accent1);
 }
 
 .cta-nav {
