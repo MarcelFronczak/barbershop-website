@@ -176,22 +176,27 @@ header::before {
     font-size: 13px;
 }
 
-.services {
+.wrap {     
     background-image: url(/images/wall.jpg);
     background-position: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+    
+}
+
+.content-section {
     text-align: center;
     width: 100%;
     padding: 4rem 8rem;
 }
 
-.h1-service {
+.h1-service,
+.h1-contact {
     margin-bottom: 2rem;
-    color: white;
     font-weight: 400;
-    color: var(--accent1);
+    color: #dfdfdf;
+    text-shadow: 0 3px #72461E;
 }
 
 .cards {
@@ -269,3 +274,43 @@ header::before {
 .cta-services:focus {
     transform: scale(1.05);
 }
+
+.contact-content {
+    padding: 2rem;
+    background-color: rgba(0,0,0,0.45);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #eee;
+    width: 75%;
+}
+
+.contact-data > li {
+    list-style: none;
+}
+
+.cta-contact {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 18px 12px;
+    color: var(--accent1);
+    font-weight: 200;
+    font-size: 15px;
+    text-decoration: none;
+    border: 1px solid var(--accent1);
+    border-radius: 22px;
+    transition: all .15s ease-in-out;
+}
+
+
+
+
