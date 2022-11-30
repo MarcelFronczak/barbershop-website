@@ -10,16 +10,27 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="nav">
             <div class="nav-container">
                 <a href="#" class="nav-logo"><p>JB</p></a>
                 <ul class="nav-ul">
                     <li><a class="nav-a" href="#">Services</a></li>
-                    <li><a class="nav-a" href="#">About Us</a></li>
                     <li><a class="nav-a" href="#">Contact</a></li>
+                    <li><a class="nav-a" href="#">About us</a></li>
                     <li><a class="nav-a cta-nav" href="#">Appointment</a></li>
                 </ul>
+                <div class="hamburger">
+                    <div class="bar"></div>
+                </div>
             </div>
+        </nav>
+        <nav class="nav-mobile">
+            <ul class="nav-ul">
+                <li><a class="nav-mobile-a" href="#">Services</a></li>
+                <li><a class="nav-mobile-a" href="#">Contact</a></li>
+                <li><a class="nav-mobile-a" href="#">About us</a></li>
+                <li><a class="nav-mobile-a cta-nav" href="#">Appointment</a></li>
+            </ul>
         </nav>
         <div class="header-container">
         <section class="hero-section">
@@ -73,14 +84,19 @@
         <h1 class="h1-contact">Contact</h1>
         <div class="contact-content">
             <div class="contact-data">
-                <p>+48 920 043 829</p>
-                <p>Ul. Sienkiewicza 12,<br>Warszawa</p>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i><p>+48 920 043 829</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i><p>Ul. Sienkiewicza 12,<br>Warszawa</p>
+                </div>
                 <li><a class="cta-contact" href="#">Appointment</a></li>
             </div>
             <form action="submit"></form>
         </div>
     </div>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>
 
