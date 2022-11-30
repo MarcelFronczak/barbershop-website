@@ -115,7 +115,7 @@ header {
 
 header::before {    
     content: "";
-    background-image: url(/images/header-img.jpg);
+    background-image: url(images/shutterstock_1536848120.jpg);
     background-size: cover;
     background-position: right;
     position: absolute;
@@ -177,7 +177,7 @@ header::before {
 }
 
 .wrap {     
-    background-image: url(/images/wall.jpg);
+    background-image: url(images/shutterstock_1383509360.jpg);
     background-position: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -271,7 +271,9 @@ header::before {
 }
 
 .cta-services:hover,
-.cta-services:focus {
+.cta-services:focus,
+.cta-contact:hover,
+.cta-contact:focus {
     transform: scale(1.05);
 }
 
@@ -288,10 +290,10 @@ header::before {
 .contact-data {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     color: #eee;
-    width: 75%;
+    width: 100%;
 }
 
 .contact-data > li {
@@ -299,7 +301,7 @@ header::before {
 }
 
 .cta-contact {
-    display: inline-block;
+    display: block;
     text-align: center;
     padding: 10px 18px 12px;
     color: var(--accent1);
