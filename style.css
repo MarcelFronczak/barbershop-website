@@ -184,7 +184,6 @@ header::before {
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-    
 }
 
 .content-section {
@@ -205,7 +204,8 @@ header::before {
     width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 3rem;
+    gap: 2rem;
+    flex: 1;
 }
 
 .card {
@@ -225,6 +225,7 @@ header::before {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    flex-wrap: wrap;
 }
 
 .card-title {
@@ -407,7 +408,7 @@ header::before {
 @media screen and (min-width: 765px) {
     .hamburger, .nav-mobile {
         display: none;
-    }
+    }  
 }
 
 @media screen and (max-width: 825px) {
@@ -416,7 +417,7 @@ header::before {
     }
 
     .content-section {
-        padding: 4rem 7rem;
+        padding: 4rem 6rem;
     }
 
     .cards {
@@ -434,12 +435,20 @@ header::before {
 }
 
 @media screen and (max-width: 765px) {
+    .nav {
+        background: linear-gradient(50deg, rgba(20,20,20,1) 0%, rgba(14,14,14,1) 100%);
+    }
+
     .nav-ul {
         display: none;
     }
  
     .content-section {
-        padding: 4rem 4rem;
+        padding: 4rem 2rem;
+    }
+
+    .nav-container {
+        padding: 1rem 2rem;
     }
 }
 
