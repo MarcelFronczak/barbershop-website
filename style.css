@@ -243,6 +243,7 @@ header::before {
 }
 
 .card > p {
+    padding: 0 0.5rem;
     font-size: 20px;
     font-weight: 200;
     color: var(--color-light-2);
@@ -332,10 +333,6 @@ header::before {
 
 /* Mobile nav */
 
-
-
-
-
 .hamburger {
 	position: relative;
 	display: block;
@@ -379,7 +376,7 @@ header::before {
     padding: 4rem;
     position: fixed;
     z-index: 2;
-    background-color: #121212;
+    background: linear-gradient(45deg, rgba(27,27,27,1) 0%, rgba(17,17,17,1) 100%);
     transition: all 0.3s ease-in-out;
 }
 
@@ -413,9 +410,36 @@ header::before {
     }
 }
 
+@media screen and (max-width: 825px) {
+    .header-container {
+        justify-content: center;
+    }
+
+    .content-section {
+        padding: 4rem 7rem;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .contact-data {
+        flex-direction: column;
+    }
+
+    .contact-item:nth-of-type(1),
+    .contact-item:nth-of-type(2) {
+        margin-bottom: 2rem;
+    }
+}
+
 @media screen and (max-width: 765px) {
     .nav-ul {
         display: none;
+    }
+ 
+    .content-section {
+        padding: 4rem 4rem;
     }
 }
 
