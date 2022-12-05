@@ -250,8 +250,8 @@ header::before {
 }
 
 .card-hr {
-    border-top: 1px solid var(--accent1);
-    border-color: var(--accent1);
+    border-top: 1px solid #444;
+    border-color: #444;
     margin-top: .5rem;
 }
 
@@ -440,8 +440,8 @@ header::before {
 }
 
 .divider {
-    border-top: 1px solid var(--color-grey);
-    border-color: var(--color-grey);
+    border-top: 1px solid #444;
+    border-color: #444;
     margin-bottom: 1rem;
 }
 
