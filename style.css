@@ -184,14 +184,6 @@ header::before {
     font-size: 13px;
 }
 
-.wrap {     
-    background-image: url(images/shutterstock_1383509360.jpg);
-    background-position: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-}
-
 /* SERVICE */
 
 .services {
@@ -301,6 +293,7 @@ header::before {
 
 .contact {
     background: linear-gradient(45deg, rgb(20, 20, 20) 0%, rgb(17, 17, 17) 100%);background-color: #000;
+    padding-inline: 15vw;
 }
 
 .contact-content {
@@ -352,6 +345,50 @@ header::before {
     border: 1px solid var(--accent1);
     border-radius: 22px;
     transition: all .15s ease-in-out;
+}
+
+.form {
+    margin: 2rem auto 0;
+    padding: 4rem 1rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    background-color: rgba(0,0,0,0.45);
+    border-radius: 20px;
+}
+
+.form > input {
+    margin-bottom: 1rem;
+    background-color: transparent;
+    color: var(--color-light-2);
+    padding: 12px;
+    width: 80%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: -5px -5px 10px -5px #222 inset,
+                5px 5px 10px -6px #121212 inset;
+}
+
+#submit {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 10px 22px;
+    color: var(--accent1);
+    background-color: transparent;
+    font-weight: 200;
+    font-size: 15px;
+    text-decoration: none;
+    border: 1px solid var(--accent1);
+    border-radius: 22px;
+    cursor: pointer;
+    transition: all .15s ease-in-out;
+}
+
+#submit:hover {
+    transform: scale(1.06);
 }
 
 /* ABOUT US */
