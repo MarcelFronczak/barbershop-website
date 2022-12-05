@@ -10,8 +10,9 @@
 
 :root {
     --accent1: #fada9c;
-    --color-light: #eee;
-    --color-light-2: #dfdfdf;
+    --color-light: #dfdfdf;
+    --color-light-2: #ddd;
+    --color-grey: #dcdcdc;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -26,7 +27,10 @@ h1 {
 html {
     display: block;
     box-sizing: border-box;
+    background: linear-gradient(45deg, rgba(27,27,27,1) 0%, rgba(17,17,17,1) 100%);
 }
+
+/* NAV */
 
 .nav {
     z-index: 2;
@@ -107,6 +111,8 @@ html {
     border-radius: 22px;
 }
 
+/* HERO */
+
 header {
     display: flex;
     justify-content: center;
@@ -186,14 +192,15 @@ header::before {
     overflow: hidden;
 }
 
+/* SERVICE */
+
 .content-section {
     text-align: center;
     width: 100%;
     padding: 4rem 8rem;
 }
 
-.h1-service,
-.h1-contact {
+.h1-section {
     margin-bottom: 2rem;
     font-weight: 400;
     color: var(--color-light-2);
@@ -240,6 +247,7 @@ header::before {
 
 .card-hr {
     border-top: 1px solid var(--accent1);
+    border-color: var(--accent1);
     margin-top: .5rem;
 }
 
@@ -281,8 +289,10 @@ header::before {
     transform: scale(1.05);
 }
 
+/* CONTACT */
+
 .contact-content {
-    padding: 2rem;
+    padding: 3.5rem 2rem;
     background-color: rgba(0,0,0,0.45);
     border-radius: 20px;
     display: flex;
@@ -330,6 +340,67 @@ header::before {
     border: 1px solid var(--accent1);
     border-radius: 22px;
     transition: all .15s ease-in-out;
+}
+
+/* ABOUT US */
+
+.about-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.about-column {
+    width: 45%;
+}
+
+.about-column-box,
+.hours-column-box {
+    background-color: rgba(0,0,0,0.45);
+    border-radius: 10px;
+    padding: 2rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.about-description {
+    font-size: 20px;
+    font-weight: 200;
+    color: var(--color-light);
+}
+
+.about-description:nth-child(1) {
+    margin-bottom: 1rem;
+    font-size: 22px;
+}
+
+.about-description:nth-child(2) {
+    color: var(--color-light-2)
+}
+
+.divider {
+    border-top: 1px solid var(--color-grey);
+    border-color: var(--color-grey);
+    margin-bottom: 1rem;
+}
+
+.hours-list-item {
+    list-style: none;
+}
+
+.hours-list-item:nth-child(1), 
+.hours-list-item:nth-child(2) {
+    margin-bottom: 1rem;
+}
+
+.day {
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--color-light);
+}
+
+.hours {
+    font-weight: 200;
+    color: var(--accent1);
 }
 
 /* Mobile nav */
