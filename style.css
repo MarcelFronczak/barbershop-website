@@ -371,6 +371,7 @@ header::before {
     width: 80%;
     border: none;
     border-radius: 10px;
+    -webkit-appearance: none;
     box-shadow: -5px -5px 10px -5px #222 inset,
                 5px 5px 10px -6px #121212 inset;
 }
