@@ -491,11 +491,11 @@ header::before {
 }
 
 .hamburger.is-active:before {
-	transform: rotate(-45deg) translate(-8px, 6px);
+	transform: rotate(-45deg) translate(-6px, 6px);
 }
 
 .hamburger.is-active:after {
-	transform: rotate(45deg) translate(-9px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
 }
 
 .hamburger.is-active .bar {
