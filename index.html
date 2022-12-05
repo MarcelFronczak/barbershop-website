@@ -15,9 +15,9 @@
             <div class="nav-container">
                 <a href="#" class="nav-logo"><p>JB</p></a>
                 <ul class="nav-ul">
-                    <li><a class="nav-a" href="#">Services</a></li>
-                    <li><a class="nav-a" href="#">Contact</a></li>
-                    <li><a class="nav-a" href="#">About us</a></li>
+                    <li><a class="nav-a anchor" href="#services">Services</a></li>
+                    <li><a class="nav-a anchor" href="#contact">Contact</a></li>
+                    <li><a class="nav-a anchor" href="#about">About us</a></li>
                     <li><a class="nav-a cta-nav" href="#">Appointment</a></li>
                 </ul>
                 <div class="hamburger">
@@ -27,9 +27,9 @@
         </nav>
         <nav class="nav-mobile">
             <ul class="nav-ul">
-                <li><a class="nav-mobile-a" href="#">Services</a></li>
-                <li><a class="nav-mobile-a" href="#">Contact</a></li>
-                <li><a class="nav-mobile-a" href="#">About us</a></li>
+                <li><a class="nav-mobile-a anchor" href="#services">Services</a></li>
+                <li><a class="nav-mobile-a anchor" href="#contact">Contact</a></li>
+                <li><a class="nav-mobile-a anchor" href="#about">About us</a></li>
                 <li><a class="nav-mobile-a cta-nav" href="#">Appointment</a></li>
             </ul>
         </nav>
@@ -83,7 +83,7 @@
     </div>
 
     <div class="contact content-section" id="contact">
-        <h1 class="h1-section">Contact</h1>
+        <h1 class="h1-section">Contact Us</h1>
         <div class="contact-content">
             <div class="contact-data">
                 <div class="contact-item">
@@ -96,9 +96,17 @@
             </div>
             <form action="submit"></form>
         </div>
+        <div class="form-section">
+            <form action="#" class="form">
+                <input type="text" name="name" id="name" placeholder="Name" >
+                <input type="email" name="email" id="email" placeholder="Email" >
+                <input type="text" name="message" id="message" placeholder="Write your message" >
+                <button type="submit" id="submit">Send</button>
+            </form>
+        </div>
     </div>
 
-    <div class="about-us content-section">
+    <div class="about-us content-section" id="about" >
         <div class="about-columns">
             <div class="about-column about">
                 <h1 class="h1-section">About Us</h1>
