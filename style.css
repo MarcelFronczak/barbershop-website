@@ -194,6 +194,14 @@ header::before {
 
 /* SERVICE */
 
+.services {
+    background-image: url(images/shutterstock_1383509360.jpg);
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
 .content-section {
     text-align: center;
     width: 100%;
@@ -291,6 +299,10 @@ header::before {
 
 /* CONTACT */
 
+.contact {
+    background: linear-gradient(45deg, rgb(20, 20, 20) 0%, rgb(17, 17, 17) 100%);background-color: #000;
+}
+
 .contact-content {
     padding: 3.5rem 2rem;
     background-color: rgba(0,0,0,0.45);
@@ -343,6 +355,14 @@ header::before {
 }
 
 /* ABOUT US */
+
+.about-us {
+    background-image: url(images/shutterstock_1383509360.jpg);
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
 
 .about-columns {
     display: flex;
@@ -441,7 +461,7 @@ header::before {
 }
 
 .nav-mobile {
-    top: 80px;
+    top: 64px;
     width: 100%;
     height: 100vh;
     left: 100%;
@@ -491,9 +511,7 @@ header::before {
         padding: 4rem 6rem;
     }
 
-    .cards {
-        flex-direction: column;
-    }
+    
 
     .contact-data {
         flex-direction: column;
@@ -519,8 +537,26 @@ header::before {
     }
 
     .nav-container {
-        padding: 1rem 2rem;
+        padding: 0.5rem 1.5rem;
     }
 }
 
+@media screen and (max-width: 930px) {
+    .cards {
+        flex-direction: column;
+    }
+    
+    .about-columns {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
+    .about-column {
+        width: 100%;
+    }
+
+    .h1-working {
+        margin-top: 3rem;
+    }
+}
