@@ -1,12 +1,5 @@
 window.onload = () => {
-    const hamburger = document.querySelector('.hamburger');
-    const mobile_nav = document.querySelector('.nav-mobile');
-    
-    hamburger.addEventListener('click', function() {
-        hamburger.classList.toggle("is-active");
-        mobile_nav.classList.toggle('is-active');
-    })
-
+    //Anchor links navigation scroll to sections
     const anchors = document.querySelectorAll('.anchor');
     anchors.forEach(item => item.addEventListener('click', function(e){
         e.preventDefault();
@@ -18,4 +11,52 @@ window.onload = () => {
             behavior : 'smooth'
         })
     }))
+
+    //Slide in on scroll
+    function debounce(func, wait = 20, immediate = true) {
+        var timeout;
+        return function() {
+          var context = this, args = arguments;
+          var later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+          };
+          var callNow = immediate && !timeout;
+          clearTimeout(timeout);
+          timeout = setTimeout(later, wait);
+          if (callNow) func.apply(context, args);
+        };
+      }
+
+    const sliders = document.querySelectorAll('.slide-in');
+
+      function slideIn(e) {
+        sliders.forEach(slider => {
+            const slideInAt = (window.scrollY + window.innerHeight) - (slider.clientHeight / 2);
+            const sliderBottom = slider.offsetTop + slider.clientHeight;
+            const isHalfShown = slideInAt > slider.offsetTop;
+            const isNotScrolledPast = window.scrollY < sliderBottom;
+
+            if(isHalfShown && isNotScrolledPast) {
+                slider.classList.add('is-active');
+            } else {
+                slider.classList.remove('is-active');
+            }
+
+        })
+      }
+
+    window.addEventListener('scroll', debounce(slideIn));
+
+    //Mobile navbar slide-in/out
+    const hamburger = document.querySelector('.hamburger');
+    const mobile_nav = document.querySelector('.nav-mobile');
+    
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle("is-active");
+        mobile_nav.classList.toggle('is-active');
+    })
+
+    
+    
 }

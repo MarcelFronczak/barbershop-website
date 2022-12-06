@@ -220,11 +220,18 @@ header::before {
 }
 
 .card {
+    opacity: 0;
     background-color: rgba(0,0,0,0.45);
     border-radius: 10px;
     padding: 1rem 1rem 1.5rem;
     color: #fff;
     transition: all 0.2s ease-in-out;
+    transform: translateX(-12%);
+}
+
+.card.is-active {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .card-header-container {
@@ -262,10 +269,10 @@ header::before {
     color: var(--color-light-2);
 }
 
-.card:hover {
+/* .card:hover {
     background-color: rgba(0,0,0,0.55);
     transform: scale(1.05);
-}
+} */
 
 .card > li {
     list-style: none;
@@ -418,10 +425,25 @@ header::before {
 
 .about-column-box,
 .hours-column-box {
+    opacity: 0;
     background-color: rgba(0,0,0,0.45);
     border-radius: 10px;
     padding: 2rem;
     transition: all 0.2s ease-in-out;
+}
+
+.about-column-box {
+    transform: translateX(-12%);
+}
+
+.hours-column-box {
+    transform: translateX(12%); 
+}
+
+.about-column-box.is-active,
+.hours-column-box.is-active {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .about-description {
