@@ -89,7 +89,7 @@ body {
     display:block;
 }
 
-.nav-logo:hover, .nav-logo:focus {
+.nav-logo:hover {
     box-shadow: 0 0 0.9em -0.3em var(--accent1);
 }
 
