@@ -295,11 +295,6 @@ header::before {
     color: var(--color-light-2);
 }
 
-/* .card:hover {
-    background-color: rgba(0,0,0,0.55);
-    transform: scale(1.05);
-} */
-
 .card > li {
     list-style: none;
     transition: all 0.2s ease-in-out;
