@@ -13,7 +13,7 @@ window.onload = () => {
     }))
 
     //Slide in on scroll
-    function debounce(func, wait = 20, immediate = true) {
+    function debounce(func, wait = 10, immediate = true) {
         var timeout;
         return function() {
           var context = this, args = arguments;
@@ -29,12 +29,19 @@ window.onload = () => {
       }
 
     const sliders = document.querySelectorAll('.slide-in');
+    const toTop = document.querySelector('.to-top');
 
-      function slideIn(e) {
+      function scrollEvents(e) {
+        if(window.scrollY > 250) {
+          toTop.classList.add('is-active');
+        } else {
+          toTop.classList.remove('is-active');
+        }
+
         sliders.forEach(slider => {
             const slideInAt = (window.scrollY + window.innerHeight) - (slider.clientHeight / 2);
             const sliderBottom = slider.offsetTop + slider.clientHeight;
-            const isHalfShown = slideInAt > slider.offsetTop;
+            const isHalfShown = slideInAt >= slider.offsetTop;
             const isNotScrolledPast = window.scrollY < sliderBottom;
 
             if(isHalfShown && isNotScrolledPast) {
@@ -46,7 +53,7 @@ window.onload = () => {
         })
       }
 
-    window.addEventListener('scroll', debounce(slideIn));
+    window.addEventListener('scroll', debounce(scrollEvents));
 
     //Mobile navbar slide-in/out
     const hamburger = document.querySelector('.hamburger');
@@ -55,8 +62,5 @@ window.onload = () => {
     hamburger.addEventListener('click', function() {
         hamburger.classList.toggle("is-active");
         mobile_nav.classList.toggle('is-active');
-    })
-
-    
-    
+    }) 
 }

@@ -28,10 +28,36 @@ html {
     display: block;
     box-sizing: border-box;
     background: linear-gradient(45deg, rgba(27,27,27,1) 0%, rgba(17,17,17,1) 100%);
+    scroll-behavior: smooth;
 }
 
 body {
     background: linear-gradient(45deg, rgb(20, 20, 20) 0%, rgb(17, 17, 17) 100%);
+}
+
+.to-top {
+    position: fixed;
+    width: 23px;
+    height: 23px;
+    right: 36px;
+    bottom: 18px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--accent1);
+    background-color: #121212;
+    text-decoration: none;
+    font-size: 23px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s;
+}
+
+.to-top.is-active {
+    bottom: 36px;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 /* NAV */
