@@ -568,6 +568,7 @@ footer {
 .footer-li p {
     text-decoration: none;
     font-size: 16px;
+    font-weight: 400;
 }
 
 .footer-li-browse {
