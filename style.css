@@ -324,7 +324,7 @@ header::before {
 /* CONTACT */
 
 .contact {
-    background: linear-gradient(45deg, rgb(20, 20, 20) 0%, rgb(17, 17, 17) 100%);background-color: #000;
+    background: linear-gradient(45deg, rgb(20, 20, 20) 0%, rgb(17, 17, 17) 100%);
     padding-inline: 15vw;
 }
 
@@ -508,6 +508,103 @@ header::before {
     color: var(--accent1);
 }
 
+/* Footer */
+
+footer {
+    background: linear-gradient(180deg, rgba(20,20,20,1) 0%, rgba(15,15,15,1) 100%);
+    padding: 4rem 2rem;
+    font-family: 'Outfit', sans-serif;
+    overflow: hidden;
+}
+
+.footer-container {
+    max-width: 950px;
+    margin: auto;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    width: 33%;
+    padding: 0 15px;
+}
+
+.col-content {
+    display: block;
+    width:fit-content;
+    margin: 0 auto;
+}
+
+.col-content > .nav-logo {
+    margin-bottom: 1rem;
+}
+
+.footer-h {
+    font-size: 20px;
+    color: #a9a9a9;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-list {
+    list-style: none;
+}
+
+.footer-li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-p,
+.footer-a,
+.footer-li p {
+    color: #575757;
+}
+
+.footer-a,
+.footer-li p {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-li-browse {
+    transition: all 0.2s ease;
+}
+
+.footer-li-browse:hover {
+    transform: translateX(6px);
+}
+
+.footer-contact-li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer-contact-li i {
+    color: #595959;
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    margin-right: 12px;
+    color: #676767;
+    transition: all 0.15s ease;
+}
+
+.social-icon:hover {
+    color: var(--accent1);
+}
+
 /* Mobile nav */
 
 .hamburger {
@@ -608,6 +705,8 @@ header::before {
     }
 }
 
+
+
 @media screen and (max-width: 765px) {
     .nav {
         background: linear-gradient(50deg, rgba(20,20,20,1) 0%, rgba(14,14,14,1) 100%);
@@ -623,6 +722,28 @@ header::before {
 
     .nav-container {
         padding: 0.5rem 1.5rem;
+    }
+
+    footer {
+        padding-inline: 1.5rem;
+    }
+
+    .footer-col {
+        width: 50%;
+    }
+
+    .footer-col:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    .col-content {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .footer-col {
+        width: 100%;
     }
 }
 
