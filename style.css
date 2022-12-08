@@ -746,6 +746,18 @@ footer {
     .footer-col {
         width: 100%;
     }
+
+    .hero-section > h1 {
+        font-size: 52px;
+    }
+
+    .hero-section > p {
+        font-size: 16px;
+    }
+
+    .cta-hero {
+        transform: scale(0.8);
+    }
 }
 
 @media screen and (max-width: 930px) {
