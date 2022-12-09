@@ -653,6 +653,7 @@ footer {
     z-index: 2;
     background: linear-gradient(45deg, rgba(27,27,27,1) 0%, rgba(17,17,17,1) 100%);
     transition: all 0.3s ease-in-out;
+    text-align: center;
 }
 
 .nav-mobile.is-active {
@@ -662,6 +663,14 @@ footer {
 .nav-mobile > .nav-ul {
    display: flex;
    flex-direction: column;
+}
+
+.social-nav {
+    margin-top: 1rem !important;
+}
+
+.social-nav > .social-icon {
+    margin: 6px !important;
 }
 
 .nav-mobile > .nav-ul > li {
