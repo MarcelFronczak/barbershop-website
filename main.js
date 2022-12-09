@@ -1,4 +1,17 @@
 window.onload = () => {
+  //Anchor links navigation scroll to sections
+  const anchors = document.querySelectorAll('.anchor');
+  anchors.forEach(item => item.addEventListener('click', function(e){
+      e.preventDefault();
+      if(mobile_nav.classList.contains('is-active')) {
+          mobile_nav.classList.remove('is-active');
+          hamburger.classList.remove('is-active');
+      }
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior : 'smooth'
+      })
+  }))
+
   //Slide in on scroll
   function debounce(func, wait = 7, immediate = true) {
     var timeout;
@@ -36,33 +49,17 @@ const toTop = document.querySelector('.to-top');
         } else {
             slider.classList.remove('is-active');
         }
-
     })
   }
 
-window.addEventListener('scroll', debounce(scrollEvents));
+  window.addEventListener('scroll', debounce(scrollEvents));
 
-    //Anchor links navigation scroll to sections
-    const anchors = document.querySelectorAll('.anchor');
-    anchors.forEach(item => item.addEventListener('click', function(e){
-        e.preventDefault();
-        if(mobile_nav.classList.contains('is-active')) {
-            mobile_nav.classList.remove('is-active');
-            hamburger.classList.remove('is-active');
-        }
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior : 'smooth'
-        })
-    }))
+  //Mobile navbar slide-in/out
+  const hamburger = document.querySelector('.hamburger');
+  const mobile_nav = document.querySelector('.nav-mobile');
 
-    
-
-    //Mobile navbar slide-in/out
-    const hamburger = document.querySelector('.hamburger');
-    const mobile_nav = document.querySelector('.nav-mobile');
-    
-    hamburger.addEventListener('click', function() {
-        hamburger.classList.toggle("is-active");
-        mobile_nav.classList.toggle('is-active');
-    }) 
+  hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle("is-active");
+      mobile_nav.classList.toggle('is-active');
+  }) 
 }
